@@ -8,7 +8,7 @@ public class lesson2 {
     public static void main(String[] args) {
 
 // Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;Вывод для удобства восприятия.
-        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+   /*     int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 1) arr[i] = 0;
             else arr[i] = 1;
@@ -29,21 +29,32 @@ public class lesson2 {
             if (arr3[i] < 6) arr3[i] = arr3[i] * 2;
         }
         System.out.println(Arrays.toString(arr3));
-
+*/
         // Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое), и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
-        int n = 5;
-        int[][] arr4 = new int[n][n];
+        int[][] arr4 = new int[5][5];
         for (int i = 0; i < arr4.length; i++) {
             arr4[i][i] = 1;
-            arr4[i][n - i - 1] = 1;
+            arr4[i][5 - i - 1] = 1;
 
 
         }
-        for (int b = 0; b < n; b++) {                  //выводить не надо было.
-            for (int k = 0; k < n; k++) {
+        for (int b = 0; b < 5; b++) {                  //выводить не надо было.
+            for (int k = 0; k < 5; k++) {
                 System.out.print(arr4[b][k] + " ");
             }
             System.out.println();
+        }
+
+        int[] arr5 = {1, 2, 3, 4, 5};
+        System.out.println(arr5[4]);
+        System.out.println(arr5[3]);
+        System.out.println(arr5[2]);
+        System.out.println(arr5[1]);
+        System.out.println(arr5[0]);
+        System.out.println();
+        for (int i = arr5.length; i > 0; i--) {
+            //       System.out.println(arr5[(arr5.length -1 -i)]);
+            System.out.println(arr5[i - 1]);
         }
     }
 }
